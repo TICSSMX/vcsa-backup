@@ -24,17 +24,27 @@ Se han seguido las **mejores prácticas de VMware**, garantizando
 ## ⚙️ Despliegue
 
 1.  Ejecutar el script de automatización en Ubuntu 24.04.
-
 2.  El script instala dependencias, crea un usuario seguro, configura FTPS y valida la conectividad.
-
 3.  Ruta de backup para VCSA:
-
         ftps://<IP-o-FQDN-del-servidor>/backups
-
 4.  Credenciales para VCSA:
-
     -   **Usuario:** `vcsa-backup`
     -   **Contraseña:** definida durante la ejecución del script.
+
+------------------------------------------------------------------------
+## 📡 Execución en terminal
+
+```console
+ssh user@ftp.home
+--- en el servidor ---
+vim setup-vcsa-ftps.sh
+-- se copia el script y se guarda --
+chmod +x setup-vcsa-ftps.sh
+sudo ./setup-vcsa-ftps.sh
+- opcional -
+export PASV_ADDR="ftp.home"
+export CERT_CN="ftp.home"
+```
 
 ------------------------------------------------------------------------
 
