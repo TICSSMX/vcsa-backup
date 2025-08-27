@@ -42,6 +42,7 @@ vim setup-vcsa-ftps.sh
 chmod +x setup-vcsa-ftps.sh
 sudo ./setup-vcsa-ftps.sh
 - opcional -
+tr -dc 'A-Za-z0-9!@#$%^&*()_+=-' </dev/urandom | head -c 24 ; echo
 export PASV_ADDR="ftp.home"
 export CERT_CN="ftp.home"
 ```
